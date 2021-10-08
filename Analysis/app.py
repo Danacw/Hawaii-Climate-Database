@@ -18,7 +18,7 @@ from sqlalchemy import create_engine, func
 #________________________________________________
 
 #Create engine
-engine = create_engine('sqlite:///Resources/hawaii.sqlite', connect_args={'check_same_thread': False})
+engine = create_engine('sqlite:///../Resources/hawaii.sqlite', connect_args={'check_same_thread': False})
 #Reflect existing database to new model
 Base = automap_base()
 Base.prepare(engine, reflect=True)
@@ -68,7 +68,7 @@ def Station_List():
 
     #Return a JSON list of stations from dataset
     stations = session.query(Station.station).all()
-    return jsonify(stations)
+    return jsonify([dict(station)for station in stations])
 
 #Temperature
 @app.route("/api/v1.0/tobs")
