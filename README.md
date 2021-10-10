@@ -1,4 +1,4 @@
-# SQLAlchemy-Challenge
+# Hawaii Climate Database | SQLAlchemy Challenge
 Unit 10 SQLAlchemy Challenge | Surfs Up Climate Analysis | UC Davis Spring 2021
 
 For this challenge, I used ORM queries and a SQLite database to extract climate data from different weather stations in Honolulu Hawaii.
